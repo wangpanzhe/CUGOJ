@@ -1,0 +1,21 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	float a,b;
+	string r;
+	char s[100]; 
+	while(cin>>a>>b)
+	{
+		if(a==0&&b==0)
+		{
+			break;
+		}
+		sprintf(s,"%.2f",a+b);
+		r+=s;
+		r+="\n";	
+	}
+	cout<<r;
+}
