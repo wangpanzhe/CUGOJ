@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	int n;
+	string r;
+	char s[100];
+	while(cin>>n)
+	{
+		if(n>10000)
+		break;
+		if(n>=1&&n<=10000)
+		{
+			int sum=0;
+			for(int i=1;i<=n;i++)
+			sum+=i;
+			sprintf(s,"%d",sum);
+			r+=s;
+			r+="\n";
+		}
+		if(n<=0)
+		{
+			r+="Error Input";
+			r+="\n";
+		}
+	}
+	cout<<r;
+	return 0;
+}
