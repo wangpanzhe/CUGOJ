@@ -1,0 +1,24 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	int p;
+	int a,b;
+	char s[100];
+	string r;
+	cin>>p;
+	if(p>=1&&p<=1000000)
+	{
+		for(int i=0;i<p;i++)
+		{
+			cin>>a>>b;
+			sprintf(s,"%d",a+b);
+			r+=s;
+			r+="\n";
+		}
+		cout<<r;
+	}
+	return 0;
+}
