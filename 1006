@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a1,b1,a2,b2;
+	cin>>a1>>b1;
+	cin>>a2>>b2;
+	int x,y;
+	if(a1>=a2)
+		x=a1-a2;
+	else
+		x=a2-a1;
+	if(b1>=b2)
+		y=b1-b2;
+	else
+		y=b2-b1;
+	cout<<x+y<<endl;
+	return 0;
+}
