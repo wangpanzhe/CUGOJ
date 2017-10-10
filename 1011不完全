@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	string a;
+	getline(cin,a);
+	int num=a.size();
+	cout<<num<<endl;
+	int temp=0;
+	int t=0;
+	for(int i=0;i<num;i++)
+	{
+		if(a[i]==' ')
+		{
+			if (temp<i-t-1)
+			{
+				temp=i-t-1;
+				t=i;
+			}
+		}
+	}
+	cout<<temp<<endl; 
+}
