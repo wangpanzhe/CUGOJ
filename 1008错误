@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cmath>
 #include<string>
-#include<iomanip>
+//#include<iomanip>//控制小数位数的函数setprecision
 using namespace std;
 
 int main()
