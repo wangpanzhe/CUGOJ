@@ -1,0 +1,59 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+bool allisgood(string x);
+
+int main()
+{
+	string a,r;
+
+	while (cin >> a)
+	{
+		int len = a.length();
+		if (a == "**********")
+		{
+			break;
+		}
+		if (allisgood(a))
+		{
+			if ((a[0] >= 'a'&& a[0] <= 'z') || (a[0] >= 'A' && a[0] <= 'Z'))
+			{
+				if (len >= 6 && len <= 10)
+				{
+					r += "Valid";
+					r += "\n";
+				}
+			}
+		}
+		else
+		{
+			r += "Invalid";
+			r += "\n";
+		}
+	}
+	cout << r << endl;
+	system("pause");
+	return 0;
+}
+
+
+bool allisgood(string x)
+{
+	int i;
+	for (i = 0; i < x.size(); i++)
+	{
+		if ((x[i] >= 'a'&&x[i] <= 'z') || (x[i] >= 'A' && x[i] <= 'Z') )
+		{
+			
+			continue;
+		}
+		else if (x[i] >= '0'&& x[i] <= '9')
+		{
+			continue;
+		}
+		else
+			return false;
+	}
+	return true;
+}
