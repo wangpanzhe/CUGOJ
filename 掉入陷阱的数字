@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+int get_sum(int x);
+
+int main()
+{
+	int n,i=1;
+	cin >> n;
+	while ( n)
+	{
+		int t = n;
+		n = get_sum(n);
+		cout << i << ":" << n << endl;
+		i++;
+		if (n == t)
+		{
+			break;
+		}
+	}
+	system("pause");
+	return 0;
+}
+
+int get_sum(int x)
+{
+	int i[6], n = 0;
+	while (x > 9)
+	{
+		i[n] = x % 10;
+		x /= 10;
+		n++;
+	}
+	i[n] = x;
+	int sum = 0;
+	for (int j = 0; j < n+1; j++)
+	{
+		sum += i[j];
+	}
+	sum = sum * 3 + 1;
+	return sum;
+}
