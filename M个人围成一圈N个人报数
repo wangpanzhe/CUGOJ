@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+void perm(int m,int n,int out[]);
+int main()
+{
+	int m,n;
+	cin>>m>>n;
+	int out[m];
+	for(int i=0;i<m;i++)
+	{
+		out[i]=i+1;
+	}
+	perm(m,n,out);
+	return 0;
+}
+
+void perm(int m,int n,int out[])
+{
+	int num=m,t=1,temp=0;
+	while(num!=0)
+	{
+		for(int i=temp;i<m;i++)
+		{
+			if(out[i]==0) continue;
+			else 
+			{
+				if(t==n)
+				{
+					cout<<out[i]<<endl;
+					out[i]=0;
+					num--;
+					t=1;
+				}
+				else t++;
+			}
+		}
+	}
+}
