@@ -1,0 +1,36 @@
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+using namespace std;
+
+double H,h,d;
+
+double gongshi(double x)
+{
+	return d+H-x-(H-h)*d/x;
+}
+
+
+int main()
+{
+	int n;
+	cin>>n;
+	while(n--){
+		cin>>H>>h>>d;
+		double l=(H-h)*d/H,r=d;
+		double mid=(l+r)/2;
+		double midmid=(mid+r)/2;
+		while(1){
+			if(gongshi(mid)>=gongshi(midmid)){
+				l=mid;
+			}
+			else r=midmid;
+			mid=(l+r)/2;
+			midmid=(mid+r)/2;
+			if(r-l<0.0000000001){
+				cout<<fixed<<setprecision(3)<<gongshi(mid)<<endl;
+				break;
+			}
+		}
+	}
+}
